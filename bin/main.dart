@@ -24,7 +24,7 @@ void main() {
 }
 
 void _showAuthMenu() {
-  print('\n━━━ AUTHENTICATION MENU ━━━');
+  print('\n━━━ AUTHENTICATION MENUUU ━━━');
   print('1. Login');
   print('2. Exit');
   // print('Predefined Users:');
