@@ -139,7 +139,9 @@ class AccountService {
 
     print('\n=== Transaction History ===');
     for (var transaction in transactions) {
-      final date = DateFormat('yyyy-MM-dd HH:mm:ss').format(transaction.createdAt);
+      final date = DateFormat(
+        'yyyy-MM-dd HH:mm:ss',
+      ).format(transaction.createdAt);
       print(
         '${transaction.type.padRight(12)} | \$${transaction.amount.toStringAsFixed(2).padLeft(10)} | $date | ${transaction.description}',
       );
@@ -152,7 +154,9 @@ class AccountService {
     String accountNumber,
   ) {
     try {
-      return allAccounts.firstWhere((acc) => acc.accountNumber == accountNumber);
+      return allAccounts.firstWhere(
+        (acc) => acc.accountNumber == accountNumber,
+      );
     } catch (e) {
       print('❌ Account not found!');
       return null;

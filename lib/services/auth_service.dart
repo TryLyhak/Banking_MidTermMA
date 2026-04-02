@@ -33,7 +33,9 @@ class AuthService {
   /// Login a user with attempt limit (max 3 tries)
   User? login(String username, String password) {
     if (_loginAttempts >= _maxLoginAttempts) {
-      print('❌ Maximum login attempts ($_maxLoginAttempts) exceeded. Please try again later.');
+      print(
+        '❌ Maximum login attempts ($_maxLoginAttempts) exceeded. Please try again later.',
+      );
       return null;
     }
 
